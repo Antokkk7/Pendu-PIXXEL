@@ -1,0 +1,280 @@
+.root {
+    -neon-cyan: #00f0ff;
+    -neon-magenta: #ff2bd6;
+    -neon-violet: #9d4dff;
+    -neon-lime: #39ff14;
+    -neon-red: #ff3860;
+    -neon-yellow: #ffe600;
+    -bg-dark: #07030f;
+    -bg-panel: #150a2e;
+    -text: #e8e6ff;
+
+    -fx-font-family: "Rajdhani", "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-base: #1d0b3d;
+    -fx-background: #07030f;
+    -fx-text-fill: -text;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.label {
+    -fx-text-fill: -text;
+}
+
+/*  Barre de menu  */
+
+.menu-bar {
+    -fx-background-color: linear-gradient(to bottom, #1d0b3d, #0d0520);
+    -fx-border-color: transparent transparent -neon-magenta transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 0.55), 14, 0.2, 0, 2);
+}
+
+.menu-bar .menu {
+    -fx-background-radius: 0;
+}
+
+.menu-bar .menu > .label {
+    -fx-text-fill: -neon-cyan;
+    -fx-font-size: 15px;
+}
+
+.menu-bar .menu:hover,
+.menu-bar .menu:showing {
+    -fx-background-color: rgba(0, 240, 255, 0.15);
+}
+
+.context-menu {
+    -fx-background-color: #0d0520;
+    -fx-background-insets: 0;
+    -fx-border-color: -neon-cyan;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.6), 16, 0.2, 0, 0);
+}
+
+.menu-item .label {
+    -fx-text-fill: -text;
+}
+
+.menu-item:focused {
+    -fx-background-color: linear-gradient(to right, rgba(255, 43, 214, 0.45), rgba(0, 240, 255, 0.25));
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}
+
+.separator-menu-item .line,
+.separator .line {
+    -fx-border-color: rgba(157, 77, 255, 0.6) transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+/*  Boutons néon "3D"  */
+
+.button {
+    -fx-font-family: "Rajdhani";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 10 26 10 26;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-width: 2;
+    -fx-border-color: -neon-cyan;
+    /* couche 1 = tranche 3D (décalée vers le bas), couche 2 = face */
+    -fx-background-color: #006b73, linear-gradient(to bottom, #2a1260, #130630);
+    -fx-background-insets: 0 0 -6 0, 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.55), 16, 0.25, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #00a8b5, linear-gradient(to bottom, #3a1a82, #1c0944);
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.95), 24, 0.45, 0, 0);
+    -fx-translate-y: -1;
+}
+
+.button:pressed {
+    -fx-translate-y: 4;
+    -fx-background-insets: 0 0 -2 0, 0;
+}
+
+.button:disabled {
+    -fx-opacity: 0.45;
+}
+
+.btn-primary {
+    -fx-font-size: 22px;
+}
+
+.btn-secondary {
+    -fx-border-color: -neon-magenta;
+    -fx-background-color: #7d0f6b, linear-gradient(to bottom, #4a1050, #240630);
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 0.6), 16, 0.25, 0, 0);
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #b3169a, linear-gradient(to bottom, #66166e, #340845);
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 1), 24, 0.45, 0, 0);
+}
+
+.btn-danger {
+    -fx-border-color: -neon-red;
+    -fx-background-color: #7a1228, linear-gradient(to bottom, #4a0c1c, #240510);
+    -fx-effect: dropshadow(gaussian, rgba(255, 56, 96, 0.6), 16, 0.25, 0, 0);
+}
+
+.btn-danger:hover {
+    -fx-background-color: #b01a3a, linear-gradient(to bottom, #66102a, #36061a);
+    -fx-effect: dropshadow(gaussian, rgba(255, 56, 96, 1), 24, 0.45, 0, 0);
+}
+
+.btn-hint {
+    -fx-border-color: -neon-yellow;
+    -fx-background-color: #806f00, linear-gradient(to bottom, #4a4000, #261f00);
+    -fx-effect: dropshadow(gaussian, rgba(255, 230, 0, 0.55), 16, 0.25, 0, 0);
+}
+
+.btn-hint:hover {
+    -fx-background-color: #b39d00, linear-gradient(to bottom, #665a00, #332c00);
+    -fx-effect: dropshadow(gaussian, rgba(255, 230, 0, 1), 24, 0.45, 0, 0);
+}
+
+/*  Touches du clavier  */
+
+.key {
+    -fx-font-family: "Audiowide";
+    -fx-font-size: 24px;
+    -fx-padding: 0;
+    -fx-text-fill: -neon-cyan;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-insets: 0 0 -7 0, 0;
+}
+
+.key:hover {
+    -fx-text-fill: white;
+}
+
+.key:pressed {
+    -fx-background-insets: 0 0 -2 0, 0;
+}
+
+.key-ok {
+    -fx-text-fill: -neon-lime;
+    -fx-border-color: -neon-lime;
+    -fx-background-color: #176b05, linear-gradient(to bottom, #0f4a05, #082a03);
+    -fx-effect: dropshadow(gaussian, rgba(57, 255, 20, 0.8), 18, 0.35, 0, 0);
+}
+
+.key-ko {
+    -fx-text-fill: -neon-red;
+    -fx-border-color: -neon-red;
+    -fx-background-color: #7a1228, linear-gradient(to bottom, #4a0c1c, #240510);
+    -fx-effect: dropshadow(gaussian, rgba(255, 56, 96, 0.8), 18, 0.35, 0, 0);
+}
+
+.key:disabled {
+    -fx-opacity: 0.55;
+}
+
+.key-ok:disabled,
+.key-ko:disabled {
+    -fx-opacity: 0.9;
+}
+
+/*  Zone d'affichage du mot  */
+
+.word-panel {
+    -fx-background-color: rgba(21, 10, 46, 0.85);
+    -fx-background-radius: 16;
+    -fx-border-color: -neon-magenta;
+    -fx-border-radius: 16;
+    -fx-border-width: 2;
+    -fx-padding: 14 34 14 34;
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 0.7), 26, 0.3, 0, 0);
+}
+
+.word {
+    -fx-font-family: "Audiowide";
+    -fx-font-size: 40px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.95), 14, 0.4, 0, 0);
+}
+
+.errors {
+    -fx-font-size: 18px;
+    -fx-text-fill: -neon-yellow;
+    -fx-background-color: rgba(255, 230, 0, 0.1);
+    -fx-border-color: -neon-yellow;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 3 18 3 18;
+    -fx-effect: dropshadow(gaussian, rgba(255, 230, 0, 0.5), 10, 0.2, 0, 0);
+}
+
+/*  Messages  */
+
+.message {
+    -fx-font-size: 20px;
+    -fx-text-fill: -text;
+}
+
+.msg-ok   { -fx-text-fill: -neon-lime;  -fx-effect: dropshadow(gaussian, rgba(57, 255, 20, 0.8), 10, 0.3, 0, 0); }
+.msg-ko   { -fx-text-fill: -neon-red;   -fx-effect: dropshadow(gaussian, rgba(255, 56, 96, 0.8), 10, 0.3, 0, 0); }
+.msg-win  { -fx-text-fill: -neon-lime;  -fx-font-size: 24px; -fx-effect: dropshadow(gaussian, rgba(57, 255, 20, 1), 16, 0.5, 0, 0); }
+.msg-lose { -fx-text-fill: -neon-red;   -fx-font-size: 24px; -fx-effect: dropshadow(gaussian, rgba(255, 56, 96, 1), 16, 0.5, 0, 0); }
+
+.answer {
+    -fx-font-size: 18px;
+    -fx-text-fill: -neon-cyan;
+}
+
+.cheat-answer {
+    -fx-font-family: "Audiowide";
+    -fx-font-size: 20px;
+    -fx-text-fill: -neon-yellow;
+    -fx-effect: dropshadow(gaussian, rgba(255, 230, 0, 0.8), 12, 0.3, 0, 0);
+}
+
+.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: -neon-cyan;
+    -fx-effect: dropshadow(gaussian, rgba(0, 240, 255, 0.9), 10, 0.3, 0, 0);
+}
+
+/*  Images (gifs)  */
+
+.gif-frame {
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 0.9), 22, 0.35, 0, 0);
+}
+
+/*  Boîtes de dialogue  */
+
+.neon-dialog {
+    -fx-background-color: #0d0520;
+    -fx-border-color: -neon-magenta;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(255, 43, 214, 0.8), 24, 0.3, 0, 0);
+}
+
+.neon-dialog .header-panel {
+    -fx-background-color: linear-gradient(to right, #4a1050, #1d0b3d);
+}
+
+.neon-dialog .header-panel .label {
+    -fx-font-family: "Audiowide";
+    -fx-font-size: 16px;
+    -fx-text-fill: -neon-cyan;
+}
+
+.neon-dialog .content.label {
+    -fx-text-fill: -text;
+    -fx-font-size: 16px;
+}
+
+.neon-dialog .button-bar .button {
+    -fx-min-width: 90;
+}
